@@ -28,7 +28,7 @@ module Sinatra
 
       before do
         @staticmatic = staticmatic
-        staticmatic.instance_variable_set('@current_page', request.path_info)L
+        staticmatic.instance_variable_set('@current_page', request.path_info)
       end
     end
   end

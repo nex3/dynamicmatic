@@ -5,6 +5,8 @@ module Sinatra
   module DynamicMatic
     def self.registered(app)
       app.set :compile_on_start, true
+
+      app.set :lock, true
       app.set :public, Proc.new {app.root && File.join(app.root, 'site')}
 
       configuration = StaticMatic::Configuration.new

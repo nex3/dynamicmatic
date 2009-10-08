@@ -44,3 +44,15 @@ Sinatra helpers are, however, available for StaticMatic layouts
 It's not safe to rely on them being there,
 although you can check for their existence with `defined?`
 and call them if they're there.
+
+## Configuration
+
+StaticMatic is configured using `src/configuration.rb`.
+Sinatra is configured using the `set` method.
+In other words, configuration happens as usual.
+
+DynamicMatic itself is configured in the Sinatra manner, with `set`.
+Currently it only has one option:
+
+* `compile_on_start`: Whether to compile the StaticMatic site
+  when the Sinatra app is started.

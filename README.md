@@ -16,6 +16,14 @@ Otherwise the standard Sinatra directories are used.
 If the Sinatra `:root` option is changed,
 DynamicMatic will respect that and set the StaticMatic paths appropriately.
 
+## Usage
+
+If you're using a classic-style Sinatra application,
+all you have to do is `require 'sinatra/dynamicmatic'`.
+If you're using a modular application,
+you'll also have to `include Sinatra::DynamicMatic`
+in your `Sinatra::Base` subclass.
+
 ## How it Works
 
 The static pages and stylesheets in the StaticMatic `src` directory

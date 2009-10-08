@@ -2,7 +2,7 @@
 
 DynamicMatic is a tiny [Sinatra](http://sinatrarb.com) extension
 that integrates Sinatra with [StaticMatic](http://staticmatic.rubyforge.org).
-The idea is to allow most of your site to be static
+It allows most of your site to be static
 while having a few dynamic pages that can use the StaticMatic layouts and partials.
 
 ## Setup

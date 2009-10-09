@@ -27,7 +27,9 @@ in your `Sinatra::Base` subclass.
 ## How it Works
 
 The static pages and stylesheets in the StaticMatic `src` directory
-are compiled when the application is started and served statically.
+are served statically - they should be compiled before the server is started.
+This can be done using `staticmatic.run("build")` in your Sinatra app.
+
 Any dynamic Sinatra pages can make use of the StaticMatic layouts and helpers,
 but are rendered dynamically on each request.
 

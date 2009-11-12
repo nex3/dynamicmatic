@@ -1,11 +1,16 @@
 require 'sinatra/base'
 require 'staticmatic'
+require File.dirname(__FILE__) + '/dynamicmatic/middleware'
 
 module Sinatra
   module DynamicMatic
     def self.registered(app)
       app.set :lock, true
       app.set :public, Proc.new {app.root && File.join(app.root, 'site')}
+
+      # If we're in development, don't serve the StaticMatic files statically.
+      # Instead, render them dynamically, as with `staticmatic preview`.
+      app.use Middleware if app.environment == :development
 
       configuration = StaticMatic::Configuration.new
 

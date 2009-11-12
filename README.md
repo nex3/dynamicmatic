@@ -60,3 +60,11 @@ and call them if they're there.
 StaticMatic is configured using `src/configuration.rb`.
 Sinatra is configured using the `set` method.
 In other words, configuration happens as usual.
+
+## Preview
+
+When you run your app in development mode,
+your static pages are actually generated dynamically on each request,
+just like with `staticmatic preview`.
+Once you're in production, though,
+they're all served swiftly from the `site` folder.

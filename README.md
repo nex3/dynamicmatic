@@ -61,8 +61,10 @@ StaticMatic is configured using `src/configuration.rb`.
 Sinatra is configured using the `set` method.
 In other words, configuration happens as usual.
 
-DynamicMatic itself is configured in the Sinatra manner, with `set`.
-Currently it only has one option:
+## Preview
 
-* `compile_on_start`: Whether to compile the StaticMatic site
-  when the Sinatra app is started.
+When you run your app in development mode,
+your static pages are actually generated dynamically on each request,
+just like with `staticmatic preview`.
+Once you're in production, though,
+they're all served swiftly from the `site` folder.

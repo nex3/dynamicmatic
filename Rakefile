@@ -15,6 +15,7 @@ DESCRIPTION
     gemspec.add_dependency 'staticmatic', '>= 0.10.7'
     gemspec.has_rdoc = false
   end
+  Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end
